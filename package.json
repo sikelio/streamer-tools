@@ -1,0 +1,17 @@
+{
+  "name": "streamer-tools",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Sik'",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "electron": "^21.3.0",
+    "electron-builder": "^23.6.0",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,15 @@
+body {
+    padding-bottom: 20px;
+}
+
+nav {
+    -webkit-app-region: drag;
+}
+
+nav button, nav a {
+    -webkit-app-region: no-drag;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
