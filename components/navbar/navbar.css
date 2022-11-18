@@ -18,3 +18,8 @@ nav button, nav a {
 .btn-nav-menu {
     float: right;
 }
+
+.nav-link.disabled {
+    pointer-events: all;
+    cursor: not-allowed;
+}
