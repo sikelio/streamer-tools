@@ -1,5 +1,6 @@
 body {
     padding-bottom: 20px;
+    background-color: #2f353b;
 }
 
 nav {
@@ -12,4 +13,8 @@ nav button, nav a {
 
 .navbar {
     margin-bottom: 20px;
+}
+
+.btn-nav-menu {
+    float: right;
 }

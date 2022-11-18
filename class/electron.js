@@ -2,10 +2,12 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
 class Electron {
+    #win
+
     generateWindow() {
         const createWindow = () => {
-            const win = new BrowserWindow({
-                width: 800,
+            this.#win = new BrowserWindow({
+                width: 1000,
                 height: 600,
                 frame: false,
                 autoHideMenuBar: true,
@@ -14,13 +16,13 @@ class Electron {
                 }
             });
 
-            win.loadFile('./pages/home/home.html');
+            this.#win.loadFile('./pages/home.html');
         };
 
         app.whenReady().then(() => {
             createWindow();
 
-            this.#ipcEvents();
+            this.#ipcEvents(app, this.#win);
 
             app.on('activate', () => {
                 if (BrowserWindow.getAllWindows().length === 0) {
@@ -36,13 +38,17 @@ class Electron {
         });
     }
 
-    #ipcEvents() {
+    #ipcEvents(app, win) {
         ipcMain.on('close', () => {
-            console.log('close');
+            app.quit();
         });
 
         ipcMain.on('fullscreen', () => {
-            console.log('clofullscreenne');
+            win.maximize();
+        });
+
+        ipcMain.on('exit-fullscreen', () => {
+            win.unmaximize()
         });
     }
 }

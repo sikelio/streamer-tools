@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../libs/bootstrap@5.2.2/bootstrap.min.css">
-    <link rel="stylesheet" href="../../libs/bootstrap-icons@1.10.2/bootstrap-icons.css">
-    <link rel="stylesheet" href="../../style/navbar.css">
+    <link rel="stylesheet" href="../libs/bootstrap@5.2.2/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/bootstrap-icons@1.10.2/bootstrap-icons.css">
+    <link rel="stylesheet" href="../components/navbar/navbar.css">
     <title>Streamer Tools</title>
 </head>
 <body>
@@ -28,11 +28,18 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1">
                             <li class="nav-item">
-                                <button type="button" class="btn btn-warning btn-nav-menu" data-action="fullscreen">
-                                    <i class="bi bi-fullscreen"></i>
+                                <a class="nav-link m-1" href="">
+                                    <i class="bi bi-gear"></i>
+                                    Settings
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-danger btn-nav-menu m-1" data-action="close">
+                                    <i class="bi bi-x-circle" id="close"></i>
                                 </button>
-                                <button type="button" class="btn btn-danger btn-nav-menu" data-action="close">
-                                    <i class="bi bi-x-circle"></i>
+                                <button type="button" class="btn btn-warning btn-nav-menu m-1" data-action="fullscreen">
+                                    <i class="bi bi-fullscreen" id="maximize"></i>
+                                    <i class="bi bi-fullscreen-exit d-none" id="minimize"></i>
                                 </button>
                             </li>
                         </ul>
@@ -42,7 +49,8 @@
         </nav>
     </main>
 
-    <script src="../../libs/bootstrap@5.2.2/bootstrap.bundle.min.js"></script>
-    <script src="./home.js"></script>
+    <script src="../libs/bootstrap@5.2.2/bootstrap.bundle.min.js"></script>
+    <script src="../components/navbar/navbar.js"></script>
+    <script src="../components/home/home.js"></script>
 </body>
 </html>
