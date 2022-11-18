@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../libs/bootstrap@5.2.2/bootstrap.min.css">
-    <link rel="stylesheet" href="../libs/bootstrap-icons@1.10.2/bootstrap-icons.css">
-    <link rel="stylesheet" href="../components/navbar/navbar.css">
+    <link rel="stylesheet" href="../../libs/bootstrap@5.2.2/bootstrap.min.css">
+    <link rel="stylesheet" href="../../libs/bootstrap-icons@1.10.2/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../components/navbar/navbar.css">
     <title>Streamer Tools</title>
 </head>
 <body>
@@ -28,13 +28,13 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1">
                             <li class="nav-item">
-                                <a href="./home.html" class="nav-link m-1 disabled">
+                                <a href="../home.html" class="nav-link m-1">
                                     <i class="bi bi-house"></i>
                                     Home
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./settings.html" class="nav-link m-1">
+                                <a href="../settings.html" class="nav-link m-1 disabled">
                                     <i class="bi bi-gear"></i>
                                     Settings
                                 </a>
@@ -53,10 +53,23 @@
                 </div>
             </div>
         </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="mb-3">
+                    <label for="twitterTemplate" class="form-label text-light">Twitter template</label>
+                    <textarea class="form-control" id="twitterTemplate" rows="3" maxlength="280"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary mb-3" id="addTwitterTemplate">Ajouter</button>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <script src="../libs/bootstrap@5.2.2/bootstrap.bundle.min.js"></script>
-    <script src="../components/navbar/navbar.class.js"></script>
-    <script src="../components/navbar/navbar.js"></script>
+    <script src="../../libs/bootstrap@5.2.2/bootstrap.bundle.min.js"></script>
+    <script src="../../components/navbar/navbar.class.js"></script>
+    <script src="../../components/navbar/navbar.js"></script>
+    <script src="../../components/twitter/twitter.js"></script>
 </body>
 </html>

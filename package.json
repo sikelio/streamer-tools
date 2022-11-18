@@ -12,6 +12,7 @@
     "dotenv": "^16.0.3",
     "electron": "^21.3.0",
     "electron-builder": "^23.6.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "twitter": "^1.7.1"
   }
 }

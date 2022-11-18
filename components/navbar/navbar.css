@@ -20,6 +20,9 @@ nav button, nav a {
 }
 
 .nav-link.disabled {
-    pointer-events: all;
-    cursor: not-allowed;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

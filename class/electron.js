@@ -39,6 +39,9 @@ class Electron {
     }
 
     #ipcEvents(app, win) {
+        const Template = require('./template');
+        const template = new Template;
+
         ipcMain.on('close', () => {
             app.quit();
         });
@@ -49,6 +52,10 @@ class Electron {
 
         ipcMain.on('exit-fullscreen', () => {
             win.unmaximize()
+        });
+
+        ipcMain.on('twitter-template', (event, args) => {
+            template.savingTwitterTemplate(args);
         });
     }
 }
